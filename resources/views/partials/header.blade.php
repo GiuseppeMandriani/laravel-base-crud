@@ -25,6 +25,10 @@
                 <li class="nav-item">
                 <a class="nav-link @if(Route::currentRouteName() == 'comics.index') active @endif" href="{{route('comics.index')}}">Comics</a>
                 </li>
+
+                <li class="nav-item">
+                <a class="nav-link @if(Route::currentRouteName() == 'comics.create') active @endif" href="{{route('comics.create')}}">New Comic</a>
+                </li>
             </ul>
 
             </div>
