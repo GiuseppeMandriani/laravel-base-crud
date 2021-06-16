@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comic;
+use Illuminate\Support\Str;
 
 class ComicController extends Controller
 {
@@ -42,7 +43,21 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        dump($data);
+
+        // VALIDAZIONE
+
+        // INSERT IN DB
+
+            //istanza
+            $new_Comic = new Comic();
+
+            //Popolazione 
+
+                // Metodo A
+                $new_Comic->title = $data['title'];
+                $new_Comic->slug = Str::slug($new_Comic->title, '-');;
     }
 
     /**

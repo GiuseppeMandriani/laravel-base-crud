@@ -6,6 +6,8 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <form action="{{ route('comics.store')}}" method="POST">
+
+                    {{-- Protezione --}}
                     @csrf
                     @method('POST')
 
